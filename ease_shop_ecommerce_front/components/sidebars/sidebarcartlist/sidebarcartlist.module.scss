@@ -1,0 +1,140 @@
+@use "sass/var" as var;
+
+.listWrapper {
+	position: fixed;
+	background-color: #fff;
+	top: 0px;
+	height: 100vh;
+	z-index: 51;
+	width: 362px;
+	padding: 1.3rem 1.4rem;
+	left: -362px;
+	transition: all 0.3s;
+	box-shadow: 0px 5px 17px rgb(0 0 0 / 19%);
+	overflow-y: auto;
+
+	&::-webkit-scrollbar {
+		width: 6px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background-color: transparent;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: #888;
+		width: 5px;
+	}
+
+	&.openCartList {
+		left: 0px;
+	}
+
+	.header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-bottom: 1px solid rgb(237 237 237);
+		padding-bottom: 8px;
+	}
+
+	.title {
+		font-size: 0.9rem;
+		color: #222;
+		font-weight: 600;
+	}
+
+	.closeIcon {
+		cursor: pointer;
+		color: var.$softblack;
+
+		&:hover {
+			color: var(--bs-danger);
+		}
+	}
+
+	.cartList {
+		padding: 15px 0px;
+		overflow: hidden;
+	}
+
+	.btnDelete {
+		background-color: transparent;
+		border: none;
+		height: 30px;
+		color: var.$hardblack;
+		margin-right: 1rem;
+
+		&:hover,
+		&:focus {
+			color: var.$accentcolor;
+			background-color: transparent;
+		}
+	}
+
+	.btnDelete {
+		margin-top: 10px;
+		color: var.$softblack;
+		transition: all 0.4s;
+		padding: 5px;
+		border-radius: 0px;
+	}
+
+	.btnDelete:hover {
+		color: var(--bs-primary);
+	}
+
+	.btnDelete .icon {
+		color: inherit;
+		font-size: 1.1rem;
+	}
+
+	.footer {
+		margin-top: 0.5rem;
+	}
+
+	.cost {
+		color: var.$hardblack;
+		font-weight: 600;
+		border-bottom: 1px solid #ddd;
+		padding-bottom: 15px;
+	}
+
+	.totalPrice {
+		font-family: var.$poppinsfont;
+		color: #f00;
+	}
+
+	.currency {
+		font-family: var.$cairofont;
+	}
+
+	.checkoutWrapper {
+		margin-top: 1.3rem;
+	}
+
+	.checkoutWrapper .btn {
+		width: 100%;
+		font-size: 15px;
+		text-transform: capitalize;
+		padding: 10px 30px;
+		display: block;
+		text-align: center;
+		color: var.$softblack;
+		margin-top: 0.8rem;
+		transition: all 0.3s;
+
+		&:first-child {
+			background-color: #f1f1f1;
+		}
+
+		&:last-child {
+			border: 1px solid rgb(237 237 237);
+		}
+
+		&:hover {
+			background-color: var.$hardblack;
+			color: #fff;
+		}
+	}
+}

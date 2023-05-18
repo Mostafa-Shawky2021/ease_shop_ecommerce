@@ -1,0 +1,14 @@
+@use "./var" as var;
+
+body {
+	font-family: var.$cairofont;
+	direction: var.$direction;
+	font-size: 15px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	color: #292b2c;
+}

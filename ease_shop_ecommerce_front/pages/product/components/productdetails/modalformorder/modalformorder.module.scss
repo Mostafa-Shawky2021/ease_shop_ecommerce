@@ -1,0 +1,90 @@
+@use 'sass/var' as var;
+
+.formModal {
+
+    .formModalHeader {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #f7f4f4;
+        padding: 0.5rem 1rem;
+
+    }
+
+    .formModalHeader .title {
+        font-weight: 500;
+        color: var.$softblack;
+        font-size: 1rem;
+    }
+
+    .formModalHeader .closeModal {
+        cursor: pointer;
+        transition: all 0.3s;
+        color: var.$softblack;
+        background-color: transparent;
+        border: 1px solid #dedede;
+        padding: 2px 5px;
+        border-radius: 0px;
+
+        .icon {
+            font-size: 15px;
+        }
+
+        &:hover {
+            background-color: var(--bs-primary);
+            color: #fff;
+        }
+    }
+
+    .iconLoading {
+        position: absolute;
+        top: 26%;
+        left: 50%;
+        transform: translate(-50%);
+        color: var.$secondarycolor;
+    }
+
+    .required {
+        color: #f00;
+    }
+
+    .formControl {
+
+        &:hover,
+        &:focus {
+            border: 1px solid var.$secondarycolor;
+            box-shadow: none;
+        }
+    }
+
+    .labelControl {
+        font-size: 0.8rem;
+    }
+
+    .errorField {
+        border: 1px solid #f00 !important;
+    }
+
+    .errMsg {
+        font-size: 0.9rem;
+        color: #f00;
+        margin-right: 5px;
+        margin-top: -3px;
+    }
+
+    .checkOutbtn {
+        background-color: var.$secondarycolor;
+        color: #000;
+        font-weight: 600;
+        padding: 0.5rem 1.8rem;
+        border: 1px solid var.$secondarycolor;
+        transition: all 0.3s;
+        font-size: 0.8rem;
+
+        &:hover {
+            background: #e5a400;
+            border: 1px solid #e5a400;
+        }
+    }
+
+}

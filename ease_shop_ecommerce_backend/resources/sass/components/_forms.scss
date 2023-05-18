@@ -1,0 +1,42 @@
+@use "../helper/var";
+
+.mainform-app {
+    margin-top: 1rem;
+    background-color: #fff;
+
+    .form-group {
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .label-control {
+        color: #707070;
+        font-weight: 600;
+        font-size: 0.85rem;
+    }
+
+    .btn-add-fast {
+        padding: 0px;
+        font-size: 0.8rem;
+        color: var(--bs-primary);
+    }
+
+    .short-description {
+        height: 140px;
+        resize: none;
+    }
+
+    .product-variant {
+        background-color: transparent;
+        color: #000;
+        padding: 0.3rem 1.2rem;
+        cursor: pointer;
+        border: 1px solid #dedede;
+        font-weight: 500;
+    }
+
+    .product-variant.selected-variant {
+        background-color: #e0e0e0;
+    }
+}

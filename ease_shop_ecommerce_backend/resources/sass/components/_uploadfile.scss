@@ -1,0 +1,60 @@
+@use "../helper/var";
+
+.file-wrapper {
+    position: relative;
+    border: 2px dashed #dedede;
+    height: 38px;
+    border-radius: 3px;
+
+    input[type="file"] {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        cursor: pointer;
+        left: 0px;
+        top: 0px;
+    }
+    .images-count {
+        font-size: 0.8rem;
+        color: #7c7c7c;
+        font-weight: 500;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+    }
+    .file-content-show {
+        padding: 3px 12px;
+        position: absolute;
+        bottom: 3px;
+        left: 0px;
+        height: 116px;
+    }
+
+    .btn-action {
+        position: absolute;
+        border: none;
+        font-size: 0.8rem;
+        font-weight: 500;
+        border-radius: 10px;
+        padding: 5px 7px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .delete-btn {
+        position: absolute;
+        left: -233px;
+    }
+
+    .view-btn {
+        left: -124px;
+    }
+
+    .btn-action .icon {
+        margin-right: 5px;
+        margin-top: 5px;
+    }
+}

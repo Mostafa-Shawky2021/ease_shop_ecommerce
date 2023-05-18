@@ -1,0 +1,58 @@
+@use 'sass/var' as var;
+
+.productQuantity {
+
+    height: 40px;
+
+    .quantityAction {
+        background: transparent;
+        border: 1px solid #dedede;
+        color: var.$hardblack;
+        width: 40px;
+        text-align: center;
+        padding: 0px;
+        user-select: none;
+        transition: all 0.2s;
+        border-radius: 0px;
+
+        &:hover,
+        &:focus {
+            box-shadow: none;
+            background: var.$secondarycolor !important;
+            color: #fff;
+            border: 1px solid var.$secondarycolor !important;
+        }
+
+        &:disabled {
+            background-color: #eee !important;
+            border: 1px solid #ccc;
+        }
+    }
+
+    .content {
+        width: 42px;
+        color: var.$hardblack;
+        text-align: center;
+        border-top: 1px solid #dedede;
+        border-bottom: 1px solid #dedede;
+        font-weight: 500;
+        font-family: var.$poppinsfont;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        position: relative;
+        font-size: 14px;
+    }
+
+    .content .quantityContent {
+        position: absolute;
+        top: 51%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .content .iconLoading {
+        color: var.$secondarycolor;
+    }
+}

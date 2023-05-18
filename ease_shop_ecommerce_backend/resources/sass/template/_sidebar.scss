@@ -1,0 +1,92 @@
+@use "../helper/var";
+
+.sidebar {
+    background-color: var.$maincolor;
+    height: 92vh;
+    width: 250px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    position: fixed;
+    right: 0px;
+    top: 70px;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #888;
+        width: 5px;
+    }
+
+    .brand {
+        color: #ececec;
+        font-size: 21px;
+        letter-spacing: 1px;
+    }
+
+    .list > .item > a {
+        color: #c0bcbc;
+        padding: 0.5rem 1.5rem;
+        text-decoration: none;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:not(.title):hover {
+            color: #fff;
+        }
+
+        .icon:first-child {
+            margin-left: 0.7rem;
+            font-size: 18px;
+            color: #dddee1;
+        }
+
+        .icon:last-child {
+            margin-right: auto;
+            font-size: 0.625rem;
+        }
+    }
+
+    .list > .item .title {
+        color: #838383;
+        margin-right: 0.3rem;
+        cursor: default;
+    }
+    .chevron {
+        transition: all 0.3s;
+    }
+
+    .submenu-visible {
+        color: #fff !important;
+        .chevron {
+            transform: rotate(180deg);
+        }
+    }
+
+    .list-submenu {
+        list-style: none;
+        position: relative;
+        height: 0px;
+        overflow: hidden;
+        transition: all 0.3s;
+        padding-right: 0.5rem;
+
+        a {
+            color: #79829c;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s;
+            padding: 0.5rem 3rem 0.5rem 0px;
+
+            &:hover {
+                color: #e9e9e9;
+            }
+        }
+    }
+}

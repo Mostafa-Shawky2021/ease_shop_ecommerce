@@ -1,0 +1,39 @@
+@use 'sass/var' as var;
+
+.services {
+
+    .serviceBox {
+        text-align: center;
+        padding-top: 1.4rem;
+        padding-bottom: 1.4rem;
+
+        &:not(:last-child) {
+            border-left: 1px solid #dedede
+        }
+    }
+
+    .serviceIcon {
+        color: var.$secondarycolor;
+        font-size: 3rem;
+        margin-left: 10px;
+    }
+
+    .title {
+        color: var.$hardblack;
+        font-weight: 700;
+        margin: 6px 0px 0px;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+            color: var(--bs-primary)
+        }
+    }
+
+    .description {
+        color: var.$softblack;
+        font-size: 0.85rem;
+        font-weight: 500;
+        margin-top: 5px
+    }
+}

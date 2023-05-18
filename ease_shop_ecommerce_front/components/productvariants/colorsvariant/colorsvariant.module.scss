@@ -1,0 +1,21 @@
+@use 'sass/var' as var;
+
+.colorsWrapper {
+    display: flex;
+    gap: 8px;
+
+    .btnColor {
+        padding: 1px 5px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        transition: all 0.3s;
+        border: 0px;
+
+        &.activeChoose {
+            outline: 1px solid #979797;
+            outline-offset: 2px;
+        }
+    }
+
+}

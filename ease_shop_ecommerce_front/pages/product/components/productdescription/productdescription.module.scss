@@ -1,0 +1,10 @@
+@use 'sass/mixins/paragraph' as *;
+
+.productDescriptionWrapper {
+    margin-top: 1rem;
+
+    .productDescription {
+        @include paragraph();
+
+    }
+}

@@ -1,0 +1,16 @@
+@use "sass/var" as var;
+
+.breadCrumbLayout {
+	background: var.$secondarycolor;
+	padding: 1.3rem 0px;
+	margin-bottom: 0px;
+
+	.item {
+		font-size: 0.83rem;
+		color: #444;
+	}
+
+	.item.active {
+		color: #000;
+	}
+}

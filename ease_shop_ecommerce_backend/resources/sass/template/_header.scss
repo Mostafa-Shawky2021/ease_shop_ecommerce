@@ -1,0 +1,72 @@
+@use "../helper/var" as var;
+
+.header {
+    height: 70px;
+    position: fixed;
+    right: 0px;
+    width: 100%;
+    z-index: 50;
+
+    .logo {
+        width: 250px;
+        background: var.$maincolor;
+        font-weight: bold;
+        font-size: 1.5rem;
+        line-height: 62px;
+    }
+
+    .logo .logo-link {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .header-content {
+        background-color: #fff;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding-right: 2rem;
+        padding-left: 2rem;
+        flex-grow: 1;
+        border-bottom: 1px solid #dedede7a;
+    }
+
+    .notification-wrapper .order-notification-btn {
+        font-size: 1.1rem;
+        color: #555b6d;
+        position: relative;
+        background-color: transparent;
+        border: 0px;
+        padding: 0px;
+    }
+
+    .order-notification-btn .count {
+        background-color: var(--bs-danger);
+        color: #fff;
+        position: absolute;
+        left: -10px;
+        top: -8px;
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 0.75rem;
+    }
+
+    .avatar {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+    }
+    .dropdown .btn {
+        border: 1px solid #dedede;
+        background-color: #fff;
+    }
+    .dropdown .btn:hover {
+        background-color: transparent !important;
+    }
+    .dropdown-item {
+        font-size: 0.8rem;
+        display: flex;
+        align-items: center;
+        gap: 3px;
+    }
+}
