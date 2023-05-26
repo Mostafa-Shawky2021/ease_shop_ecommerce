@@ -4,13 +4,13 @@
 
 .menuWrapper {
 	background-color: #ffff;
-	padding: 0.625rem;
+	padding: 0.625rem 0px;
 	width: 100%;
 	z-index: 40;
 	position: sticky;
 	top: 0px;
 	&.fixed {
-		box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+		box-shadow: var.$boxshadow;
 	}
 	.categoryWrapper {
 		width: 260px;
@@ -65,7 +65,7 @@
 		padding: 0px 5px;
 		transition: all 0.5s;
 		&:hover {
-			color: #fff;
+			color: var(--bs-primary);
 		}
 	}
 	.cartListBtn .count {

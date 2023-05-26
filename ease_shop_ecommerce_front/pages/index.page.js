@@ -21,10 +21,17 @@ export async function getStaticProps() {
 
 	await Promise.allSettled([
 		queryClient.prefetchQuery(globalQueryKeys.LAYOUT, fetchLayout),
-		queryClient.prefetchQuery(globalQueryKeys.PRODUCTS(1, "latest=true&limit=8"), () => fetchProducts(1, "latest=true&limit=8")),
+		queryClient.prefetchQuery(globalQueryKeys.PRODUCTS(1, "latest=true&limit=8"), () =>
+			fetchProducts(1, "latest=true&limit=8")
+		),
 		queryClient.prefetchQuery(queryKeys.RANDOM_CATEGORIES_PRODUCTS, fetchRandomCategoriesProducts),
-		queryClient.prefetchQuery(queryKeys.CATEGORIES, fetchCategories),
-		queryClient.prefetchQuery(globalQueryKeys.PRODUCTS(1, "offers=true&latest=true&limit=8"), () => fetchProducts(1, "offers=true&latest=true&limit=8")),
+		queryClient.prefetchQuery(globalQueryKeys.CATEGORIES(), () => fetchCategories()),
+		queryClient.prefetchQuery(globalQueryKeys.PRODUCTS(1, "offers=true&latest=true&limit=8"), () =>
+			fetchProducts(1, "offers=true&latest=true&limit=8")
+		),
+		queryClient.prefetchQuery(globalQueryKeys.PRODUCTS(1, "best-seller=true&limit=8"), () =>
+			fetchProducts(1, "best-seller=true&limit=8")
+		),
 	]);
 
 	return {
