@@ -49,14 +49,19 @@ const ProductCard = ({ product, ...props }) => {
 		}
 	};
 
-	const handleAddProduct = () => addCartData();
+	const handleAddProduct = (event) => {
+		event.stopPropagation();
+		addCartData();
+	};
 
 	const handleChooseColor = (event) => {
+		event.stopPropagation();
 		const chossenColorValue = event.target.getAttribute("value");
 		setProductVariants({ ...productVariants, color: chossenColorValue });
 	};
 
 	const handleChooseSize = (event) => {
+		event.stopPropagation();
 		const chossenSizeValue = event.target.getAttribute("value");
 		setProductVariants({ ...productVariants, size: chossenSizeValue });
 	};

@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 const useFilter = (pageNumber, dynamicRoute = null, additionalQuery = null) => {
 	const [filterRules, setFilterRules] = useState({
-		price: [50, 10000],
+		price: [50, 50000],
 		sizes: [],
 		colors: [],
 		brands: [],
@@ -48,7 +48,7 @@ const useFilter = (pageNumber, dynamicRoute = null, additionalQuery = null) => {
 
 	const applyFilter = () => {
 		let FilterRuleQueryParam = { page: pageNumber };
-
+		window.scrollTo(0, 0);
 		dynamicRoute && Object.assign(FilterRuleQueryParam, dynamicRoute);
 
 		//Additional query if we need to build additional query string paramater beside state data

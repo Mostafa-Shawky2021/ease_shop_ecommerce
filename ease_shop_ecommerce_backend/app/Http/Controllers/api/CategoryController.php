@@ -83,7 +83,7 @@ class CategoryController extends Controller
 
         }
 
-        $products = $product->paginate(static::$paginationNumber);
+        $products = $product->with(['colors', 'sizes'])->paginate(static::$paginationNumber);
 
         if ($products->isNotEmpty()) {
 
@@ -118,6 +118,7 @@ class CategoryController extends Controller
 
         foreach ($randomCategories as $index => $category) {
             $categoryProducts = $category->products()
+                ->with(['colors', 'sizes'])
                 ->limit(8)
                 ->inRandomOrder()
                 ->get();
